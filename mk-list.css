@@ -1,0 +1,555 @@
+/* -------------------------------
+GENERAL RESET & BASE STYLES
+--------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+/* -------------------------------
+FLOATING ACTION BUTTON
+--------------------------------- */
+/* Default vertical FAB (desktop) */
+
+/* FAB Container */
+#fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+/* Common Button Styles */
+#fab a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #03cb00, #150a90);
+}
+
+/* Phone Button */
+.phone-btn {
+  background: linear-gradient(135deg, #010969, #3c4cdd);
+}
+
+/* Hover Glow */
+#fab a:hover {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Ripple Effect on Click */
+#fab a:active {
+  transform: scale(0.95);
+}
+
+/* Add Pulse Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(3, 226, 40, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.whatsapp-btn {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse1 {
+  0% { box-shadow: 0 0 0 0 rgba(0, 21, 215, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.phone-btn{
+  animation: pulse1 2s infinite ;
+}
+/* Tooltip */
+#fab a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+/* Show Tooltip on Hover */
+#fab a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* -------------------------------
+NAVBAR
+--------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: rgb(0, 29, 104);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* Shadow added */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle floating effect */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar .nav-links li a {
+    color: rgb(19, 0, 105);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ffb400;
+}
+
+
+/* Optional: stronger shadow on scroll */
+.navbar.scrolled {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffffcc; /* slightly transparent when scrolled */
+}
+
+/* Hamburger for mobile */
+.hamburger {
+    display: none; /* default hidden on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: rgb(19, 0, 105); /* make it visible on white navbar */
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* --------------------------
+MOBILE STYLES
+--------------------------- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* show hamburger on mobile */
+    }
+
+    .navbar .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* hide offscreen by default */
+        height: 100vh;
+        width: 60%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        transition: right 0.3s ease;
+        z-index: 998;
+    }
+
+    .navbar .nav-links.active {
+        right: 0; /* slide in when active */
+    }
+
+    /* Hamburger animation to X */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #040075;
+    font-size: 2em;
+}
+
+/* Filter Dropdown */
+select {
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #040075;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+th {
+    background: linear-gradient(90deg, #040075, #1e1ec2);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(90deg, #ff9100c8, #ffc06fc8);
+}
+
+tr:nth-child(odd) {
+    background-color: #fff9f0;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Mobile Responsive Table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    th {
+        display: none; /* Hide headers in mobile */
+    }
+    
+    td {
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #040075;
+    }
+    
+    tr {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+}
+
+/* Smooth transitions for table hover effects */
+table, th, td, tr {
+    transition: all 0.3s ease;
+}
+
+/*
+Contact  -----------*/
+.contact-section {
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #100147, #ff4d00);
+}
+
+.contact-container {
+  max-width: 1350px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1px;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform .5s, box-shadow .8s;
+  position: relative;
+}
+
+.contact-card:hover {
+  transform: translateY(-40px);
+  color: #001ba1;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ff8c00;
+}
+
+.contact-card h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-card p, 
+.contact-card a {
+  color: #444;
+  font-size: .95rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.contact-card a:hover {
+  color: #010883;
+}
+
+.copy-btn {
+  font-size: 0.85rem;
+  color: #010889;
+  cursor: pointer;
+  margin-top: 8px;
+  display: inline-block;
+  transition: color .2s;
+}
+
+.copy-btn:hover {
+  color: #080395;
+}
+
+.social-links a {
+  margin: 0 8px;
+  font-size: 1.3rem;
+  color: #02198a;
+  transition: transform .2s, color .3s;
+}
+
+.social-links a:hover {
+  color: #03117d;
+  transform: scale(1.2);
+}
+
+@media(max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .contact-card {
+    padding: 15px;
+  }
+}
+/* Footer Base */
+.footer {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* Company Info */
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff8400;
+}
+
+.footer-about p {
+  font-size: 13 px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Links */
+.footer-links h3,
+.footer-contact h3,
+.footer-newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2720ff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff6f00;
+}
+
+/* Contact Info */
+.footer-contact p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.footer-contact i {
+  color: #ff6f00;
+  margin-right: 10px;
+}
+
+/* Newsletter */
+.footer-newsletter p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background: #ff9500;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #0e00cc;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #000000;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 18px;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0c14fb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+}
