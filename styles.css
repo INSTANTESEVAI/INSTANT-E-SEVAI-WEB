@@ -289,6 +289,7 @@ HERO SECTION - MOBILE RESPONSIVE
         line-height: 1;
         font-weight: 550;
         margin-bottom: 5px;
+                display: none; /* hides the paragraph */
     }
 
     .cta-btn {
@@ -309,6 +310,7 @@ HERO SECTION - MOBILE RESPONSIVE
 
     .hero-content p {
         font-size: 0.9rem;
+                display: none; /* hides the paragraph */
     }
 
     .cta-btn {
@@ -1146,3 +1148,4 @@ Contact  -----------*/
     flex-direction: column;
   }
 }
+
