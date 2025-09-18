@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Crackers - Premium Fireworks Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="icon" type="images/png" href="images/fivcon.png">
+    <script src="new.js" defer></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <header class="sticky top-0 z-40 bg-white dark:bg-gray-800 shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center">
+                    <i class="fas fa-fire text-orange-500 text-2xl mr-2"></i>
+                    <h1 class="text-xl font-bold">Sparkle Crackers</h1>
+                </div>
+                <div class="relative w-full md:w-1/3">
+                    <input type="text" id="searchInput" placeholder="Search products..." 
+                           class="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                    <div class="relative">
+                        <select id="categoryFilter" class="appearance-none bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 pr-8 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <option value="all">All Categories</option>
+                            <option value="sound-crackers">Sound Crackers</option>
+                            <option value="flowerpots">Flowerpots</option>
+                            <option value="bombs">Bombs</option>
+                            <option value="rockets">Rockets</option>
+                            <option value="sparklers">Sparklers</option>
+                            <option value="gift-boxes">Gift Boxes</option>
+                            <option value="family-packs">Family Packs</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-3 top-3 text-gray-400 pointer-events-none"></i>
+                    </div>
+                    <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 mb-8 text-white shadow-lg relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXVjazNrbjZ5cnIxcmNpMzdndTRjNGFlNWlsYWY1Z3drMHdrdGRxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IjmMzurYulKEw/giphy.gif" alt="Fireworks" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Diwali Special Offer!</h2>
+                <p class="text-lg mb-4">Get 50% OFF on all crackers. Limited time only!</p>
+            </div>
+        </div>
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </div>
+    </main>
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Your Cart</h3>
+                    <button id="closeCartModal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="cartItems" class="mb-6">
+                </div>   
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-medium">Subtotal:</span>
+                        <span id="cartSubtotal" class="font-bold">₹0.00</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-medium">Discount (50%):</span>
+                        <span id="cartDiscount" class="font-bold text-green-500">-₹0.00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-lg">
+                        <span class="font-bold">Total:</span>
+                        <span id="cartTotal" class="font-bold text-orange-500">₹0.00</span>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button id="clearCart" class="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        Clear Cart
+                    </button>
+                    <button id="checkoutCart" class="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Place Your Order</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="selectedProduct" class="mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                </div>
+                <form id="orderForm">
+                    <div class="mb-4">
+                        <label for="fullName" class="block mb-2 font-medium">Full Name</label>
+                        <input type="text" id="fullName" required 
+                               class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phoneNumber" class="block mb-2 font-medium">Phone Number</label>
+                        <input type="tel" id="phoneNumber" required 
+                               class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block mb-2 font-medium">Address</label>
+                        <textarea id="address" rows="3" required 
+                                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="quantity" class="block mb-2 font-medium">Quantity</label>
+                        <div class="flex items-center">
+                            <button type="button" id="decreaseQty" class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-l-lg hover:bg-gray-300 dark:hover:bg-gray-600">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" id="quantity" min="1" value="1" required 
+                                   class="w-16 px-3 py-1 text-center border-t border-b border-gray-300 dark:border-gray-600 focus:outline-none dark:bg-gray-700 dark:text-white">
+                            <button type="button" id="increaseQty" class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-r-lg hover:bg-gray-300 dark:hover:bg-gray-600">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="note" class="block mb-2 font-medium">Optional Note</label>
+                        <textarea id="note" rows="2" 
+                                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        Send Order via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="confirmationToast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300 z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle text-2xl mr-3"></i>
+            <div>
+                <p class="font-bold">Order Sent!</p>
+                <p class="text-sm">Your order request has been sent via WhatsApp. We will confirm and collect payment there.</p>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/9600166116" target="_blank" 
+       class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-fire text-orange-500 text-2xl mr-2"></i>
+                        <h2 class="text-xl font-bold">Sparkle Crackers</h2>
+                    </div>
+                    <p class="mt-2 text-gray-400">Premium fireworks for all celebrations</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="mb-2">Contact us: 9600166116</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Sparkle Crackers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
