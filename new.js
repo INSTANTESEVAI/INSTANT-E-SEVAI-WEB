@@ -1531,7 +1531,7 @@ function handleOrderSubmit(e) {
         `${note ? `*Note:* ${note}%0A` : ''}`;
     
     // Open WhatsApp with pre-filled message
-    const whatsappUrl = `https://wa.me/9600166116?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/+919600166116?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
     
     // Close modal
@@ -1735,7 +1735,7 @@ function checkoutCartFunc() {
         `*Please provide your details to confirm the order*`;
     
     // Open WhatsApp with pre-filled message
-    const whatsappUrl = `https://wa.me/9600166116?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/+919600166116?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
     
     // Close modal
@@ -1854,4 +1854,5 @@ function closePreviewModal() {
     if (previewModal) {
         previewModal.classList.add('hidden');
     }
+
 }
