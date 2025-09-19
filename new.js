@@ -96,7 +96,7 @@ const products = [
         description: "Special ground chakkar (10 pcs)",
         price: 150.00,
         originalPrice: 300.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/11.jpg"
     },
     {
@@ -105,7 +105,7 @@ const products = [
         description: "Deluxe ground chakkar (10 pcs)",
         price: 262.50,
         originalPrice: 525.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/12.jpg"
     },
     {
@@ -114,7 +114,7 @@ const products = [
         description: "Magic wheel chakkar with plastic wheel",
         price: 212.50,
         originalPrice: 425.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/13.jpg"
     },
     {
@@ -123,7 +123,7 @@ const products = [
         description: "Wire chakkar with special effects",
         price: 375.00,
         originalPrice: 750.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/14.jpg"
     },
     {
@@ -132,7 +132,7 @@ const products = [
         description: "Planet themed wheeling chakkar",
         price: 375.00,
         originalPrice: 750.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/15.jpg"
     },
     {
@@ -141,7 +141,7 @@ const products = [
         description: "4x4 wheeling chakkar",
         price: 325.00,
         originalPrice: 650.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/16.jpg"
     },
     {
@@ -150,7 +150,7 @@ const products = [
         description: "Colorful cocktail spinner",
         price: 137.00,
         originalPrice: 275.00,
-        category: "flowerpots",
+        category: "Chakkars",
         image: "images/17.jpg"
     },
     {
@@ -159,7 +159,7 @@ const products = [
         description: "Small bullet bomb",
         price: 62.50,
         originalPrice: 125.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/18.jpg"
     },
     {
@@ -168,7 +168,7 @@ const products = [
         description: "Water effect bomb (10 pcs)",
         price: 115.00,
         originalPrice: 230.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/19.jpg"
     },
     {
@@ -177,7 +177,7 @@ const products = [
         description: "Powerful bomb (10 pcs)",
         price: 162.00,
         originalPrice: 325.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/20.jpg"
     },
     {
@@ -186,7 +186,7 @@ const products = [
         description: "Thrilling bomb with special effects",
         price: 575.00,
         originalPrice: 1150.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/21.jpg"
     },
     {
@@ -195,7 +195,7 @@ const products = [
         description: "Large tanker bomb",
         price: 250.00,
         originalPrice: 500.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/22.jpg"
     },
     {
@@ -204,7 +204,7 @@ const products = [
         description: "Small thunder bomb",
         price: 100.00,
         originalPrice: 200.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/23.jpg"
     },
     {
@@ -213,7 +213,7 @@ const products = [
         description: "Medium thunder bomb",
         price: 200.00,
         originalPrice: 400.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/24.jpg"
     },
     {
@@ -222,7 +222,7 @@ const products = [
         description: "Large thunder bomb",
         price: 400.00,
         originalPrice: 800.00,
-        category: "bombs",
+        category: "sound-crackers",
         image: "images/25.jpg"
     },
     {
@@ -231,7 +231,7 @@ const products = [
         description: "Rocket bomb (10 pcs)",
         price: 137.50,
         originalPrice: 275.00,
-        category: "rockets",
+        category: "fancy-out",
         image: "images/26.jpg"
     },
     {
@@ -240,7 +240,7 @@ const products = [
         description: "Rocket with 3 sounds",
         price: 250.00,
         originalPrice: 500.00,
-        category: "rockets",
+        category: "fancy-out",
         image: "images/27.jpg"
     },
     {
@@ -249,7 +249,7 @@ const products = [
         description: "Rocket with musical effects",
         price: 325.00,
         originalPrice: 650.00,
-        category: "rockets",
+        category: "fancy-out",
         image: "images/28.jpg"
     },
     {
@@ -276,7 +276,7 @@ const products = [
         description: "Small twinkling star cracker",
         price: 62.50,
         originalPrice: 125.00,
-        category: "sound-crackers",
+        category: "sparklers",
         image: "images/31.jpg"
     },
     {
@@ -285,7 +285,7 @@ const products = [
         description: "Large twinkling star (10 pcs)",
         price: 137.50,
         originalPrice: 275.00,
-        category: "sound-crackers",
+        category: "sparklers",
         image: "images/32.jpg"
     },
     {
@@ -294,7 +294,7 @@ const products = [
         description: "Silver peacock cracker",
         price: 200.00,
         originalPrice: 400.00,
-        category: "sound-crackers",
+        category: "flowerpots",
         image: "images/33.jpg"
     },
     {
@@ -303,7 +303,7 @@ const products = [
         description: "Small peacock cracker",
         price: 225.00,
         originalPrice: 450.00,
-        category: "sound-crackers",
+        category: "flowerpots",
         image: "images/34.jpg"
     },
     {
@@ -312,7 +312,7 @@ const products = [
         description: "Standard peacock cracker",
         price: 375.00,
         originalPrice: 750.00,
-        category: "sound-crackers",
+        category: "flowerpots",
         image: "images/35.jpg"
     },
     {
@@ -321,7 +321,7 @@ const products = [
         description: "Large peacock cracker",
         price: 875.00,
         originalPrice: 1750.00,
-        category: "sound-crackers",
+        category: "flowerpots",
         image: "images/36.jpg"
     },
     {
@@ -447,7 +447,7 @@ const products = [
         description: "Lollipop hand shooter",
         price: 397.00,
         originalPrice: 795.00,
-        category: "hand-shooter",
+        category: "sparklers",
         image: "images/50.jpg"
     },
     {
@@ -456,7 +456,7 @@ const products = [
         description: "Waterfall pencil hand shooter",
         price: 325.00,
         originalPrice: 650.00,
-        category: "hand-shooter",
+        category: "sparklers",
         image: "images/51.jpg"
     },
     {
@@ -465,7 +465,7 @@ const products = [
         description: "Amazing pencil hand shooter",
         price: 162.00,
         originalPrice: 325.00,
-        category: "hand-shooter",
+        category: "sparklers",
         image: "images/52.jpg"
     },
     {
@@ -474,7 +474,7 @@ const products = [
         description: "Color smoke hand shooter",
         price: 300.00,
         originalPrice: 600.00,
-        category: "hand-shooter",
+        category: "sparklers",
         image: "images/53.jpg"
     },
     {
@@ -483,7 +483,7 @@ const products = [
         description: "Shower fountain (5 pcs)",
         price: 162.50,
         originalPrice: 325.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/54.jpg"
     },
     {
@@ -492,7 +492,7 @@ const products = [
         description: "Tom and Jerry fountain (5 pcs)",
         price: 300.00,
         originalPrice: 600.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/55.jpg"
     },
     {
@@ -501,7 +501,7 @@ const products = [
         description: "Travel bus fountain",
         price: 500.00,
         originalPrice: 1000.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/56.jpg"
     },
     {
@@ -510,7 +510,7 @@ const products = [
         description: "Emo egg fountain",
         price: 272.50,
         originalPrice: 545.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/57.jpg"
     },
     {
@@ -519,7 +519,7 @@ const products = [
         description: "Sun light fountain (5 pcs)",
         price: 175.00,
         originalPrice: 350.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/58.jpg"
     },
     {
@@ -528,7 +528,7 @@ const products = [
         description: "Star light fountain (5 pcs)",
         price: 175.00,
         originalPrice: 350.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/59.jpg"
     },
     {
@@ -537,7 +537,7 @@ const products = [
         description: "Moon light fountain (5 pcs)",
         price: 175.00,
         originalPrice: 350.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/60.jpg"
     },
     {
@@ -546,7 +546,7 @@ const products = [
         description: "Icone water fountain (2 pcs)",
         price: 500.00,
         originalPrice: 1000.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/61.jpg"
     },
     {
@@ -555,7 +555,7 @@ const products = [
         description: "Purple dove fountain",
         price: 187.00,
         originalPrice: 375.00,
-        category: "fountain-variety",
+        category: "flowerpots",
         image: "images/62.jpg"
     },
     {
@@ -564,7 +564,7 @@ const products = [
         description: "Money in the bank (3 pcs)",
         price: 375.00,
         originalPrice: 750.00,
-        category: "sound-rocks",
+        category: "sound-crackers",
         image: "images/63.jpg"
     },
     {
@@ -573,7 +573,7 @@ const products = [
         description: "90 watts sound rocks (3 pcs)",
         price: 225.00,
         originalPrice: 450.00,
-        category: "sound-rocks",
+        category: "wala",
         image: "images/64.jpg"
     },
     {
@@ -582,7 +582,7 @@ const products = [
         description: "Shin Chan sound rocks (5 pcs)",
         price: 175.00,
         originalPrice: 350.00,
-        category: "sound-rocks",
+        category: "sound-crackers",
         image: "images/65.jpg"
     },
     {
@@ -591,7 +591,7 @@ const products = [
         description: "Old is gold sound rocks (25 pcs)",
         price: 375.00,
         originalPrice: 750.00,
-        category: "sound-rocks",
+        category: "sound-crackers",
         image: "images/66.jpg"
     },
     {
@@ -600,7 +600,7 @@ const products = [
         description: "Drone flying cracker (5 pcs)",
         price: 250.00,
         originalPrice: 500.00,
-        category: "flying-crackers",
+        category: "Chakkars",
         image: "images/67.jpg"
     },
     {
@@ -609,7 +609,7 @@ const products = [
         description: "Helicopter flying cracker (5 pcs)",
         price: 200.00,
         originalPrice: 400.00,
-        category: "flying-crackers",
+        category: "Chakkars",
         image: "images/68.jpg"
     },
     {
@@ -618,7 +618,7 @@ const products = [
         description: "Butterfly flying cracker (10 pcs)",
         price: 150.00,
         originalPrice: 300.00,
-        category: "flying-crackers",
+        category: "Chakkars",
         image: "images/69.jpg"
     },
     {
@@ -627,7 +627,7 @@ const products = [
         description: "Top spin (pambaram) (5 pcs)",
         price: 150.00,
         originalPrice: 300.00,
-        category: "flying-crackers",
+        category: "Chakkars",
         image: "images/70.jpg"
     },
     {
@@ -636,7 +636,7 @@ const products = [
         description: "Mega siren whistling fountain (3 pcs)",
         price: 337.50,
         originalPrice: 675.00,
-        category: "whistling-fountain",
+        category: "flowerpots",
         image: "images/71.jpg"
     },
     {
@@ -645,7 +645,7 @@ const products = [
         description: "Mini siren whistling fountain (5 pcs)",
         price: 300.00,
         originalPrice: 600.00,
-        category: "whistling-fountain",
+        category: "flowerpots",
         image: "images/72.jpg"
     },
     {
@@ -780,7 +780,7 @@ const products = [
         description: "2 1/2 inch violet flower",
         price: 462.50,
         originalPrice: 925.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/87.jpg"
     },
     {
@@ -789,7 +789,7 @@ const products = [
         description: "2 1/2 inch Ayyan pink",
         price: 462.50,
         originalPrice: 925.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/88.jpg"
     },
     {
@@ -798,7 +798,7 @@ const products = [
         description: "4 inch Golden Eye (Nayagara Falls)",
         price: 875.00,
         originalPrice: 1750.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/89.jpg"
     },
     {
@@ -807,7 +807,7 @@ const products = [
         description: "4 inch Wow blue",
         price: 925.00,
         originalPrice: 1850.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/90.jpg"
     },
     {
@@ -816,7 +816,7 @@ const products = [
         description: "4 inch Wow pink",
         price: 925.00,
         originalPrice: 1850.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/91.jpg"
     },
     {
@@ -825,7 +825,7 @@ const products = [
         description: "4 inch Wow purple",
         price: 925.00,
         originalPrice: 1850.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/92.jpg"
     },
     {
@@ -834,7 +834,7 @@ const products = [
         description: "4 inch Wow orange",
         price: 925.00,
         originalPrice: 1850.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/93.jpg"
     },
     {
@@ -843,7 +843,7 @@ const products = [
         description: "6 inch fancy cracker",
         price: 1575.00,
         originalPrice: 3150.00,
-        category: "fancy-special-colours",
+        category: "fancy-out",
         image: "images/94.jpg"
     },
     {
@@ -852,7 +852,7 @@ const products = [
         description: "12 shot rider",
         price: 300.00,
         originalPrice: 600.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/95.jpg"
     },
     {
@@ -861,7 +861,7 @@ const products = [
         description: "12 shot multi color and crackling",
         price: 450.00,
         originalPrice: 900.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/96.jpg"
     },
     {
@@ -870,7 +870,7 @@ const products = [
         description: "15 color smoke shot",
         price: 875.00,
         originalPrice: 1750.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/97.jpg"
     },
     {
@@ -879,7 +879,7 @@ const products = [
         description: "30 shot multi color",
         price: 750.00,
         originalPrice: 1500.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/98.jpg"
     },
     {
@@ -888,7 +888,7 @@ const products = [
         description: "30 shot multi color and crackling",
         price: 1000.00,
         originalPrice: 2000.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/99.jpg"
     },
     {
@@ -897,7 +897,7 @@ const products = [
         description: "60 shot multi color",
         price: 1500.00,
         originalPrice: 3000.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/100.jpg"
     },
     {
@@ -906,7 +906,7 @@ const products = [
         description: "60 shot multi color and crackling",
         price: 2000.00,
         originalPrice: 4000.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/101.jpg"
     },
     {
@@ -915,7 +915,7 @@ const products = [
         description: "120 shot multi color",
         price: 3000.00,
         originalPrice: 6000.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/102.jpg"
     },
     {
@@ -924,7 +924,7 @@ const products = [
         description: "120 shot multi color and crackling",
         price: 3750.00,
         originalPrice: 7500.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/103.jpg"
     },
     {
@@ -933,7 +933,7 @@ const products = [
         description: "240 shot multi color and crackling",
         price: 7500.00,
         originalPrice: 15000.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/104.jpg"
     },
     {
@@ -942,7 +942,7 @@ const products = [
         description: "3 1/2 fancy set out",
         price: 7250.00,
         originalPrice: 14500.00,
-        category: "repeating-shots",
+        category: "fancy-out",
         image: "images/105.jpg"
     },
     {
@@ -951,7 +951,7 @@ const products = [
         description: "Shooter heaven (10 shots)",
         price: 1000.00,
         originalPrice: 2000.00,
-        category: "hand-repeating-shots",
+        category: "fancy-out",
         image: "images/106.jpg"
     },
     {
@@ -960,7 +960,7 @@ const products = [
         description: "Air gun (2 pcs)",
         price: 910.00,
         originalPrice: 1820.00,
-        category: "hand-repeating-shots",
+        category: "fancy-out",
         image: "images/107.jpg"
     },
     {
@@ -969,7 +969,7 @@ const products = [
         description: "5x10 IPL shot",
         price: 5000.00,
         originalPrice: 10000.00,
-        category: "ipl-shot",
+        category: "fancy-out",
         image: "images/108.jpg"
     },
     {
@@ -978,7 +978,7 @@ const products = [
         description: "10x10 carnival shot",
         price: 7500.00,
         originalPrice: 15000.00,
-        category: "ipl-shot",
+        category: "fancy-out",
         image: "images/109.jpg"
     },
     {
@@ -987,7 +987,7 @@ const products = [
         description: "Sound magic electric cracker",
         price: 375.00,
         originalPrice: 750.00,
-        category: "electric-crackers",
+        category: "sound-crackers",
         image: "images/110.jpg"
     },
     {
@@ -1248,7 +1248,7 @@ const products = [
         description: "Budget combo pack",
         price: 5000.00,
         originalPrice: 10000.00,
-        category: "family-packs",
+        category: "gift-boxes",
         image: "images/139.jpg"
     },
     {
@@ -1257,7 +1257,7 @@ const products = [
         description: "Damaka family pack (3k)",
         price: 7500.00,
         originalPrice: 15000.00,
-        category: "family-packs",
+        category: "gift-boxes",
         image: "images/140.jpg"
     },
     {
@@ -1266,7 +1266,7 @@ const products = [
         description: "Double damaka pack (5k)",
         price: 12500.00,
         originalPrice: 25000.00,
-        category: "family-packs",
+        category: "gift-boxes",
         image: "images/141.jpg"
     },
     {
@@ -1275,7 +1275,7 @@ const products = [
         description: "Diamond combo pack (7k)",
         price: 17500.00,
         originalPrice: 35000.00,
-        category: "family-packs",
+        category: "gift-boxes",
         image: "images/142.jpg"
     },
     {
@@ -1284,8 +1284,71 @@ const products = [
         description: "VIP pack",
         price: 25000.00,
         originalPrice: 50000.00,
-        category: "family-packs",
+        category: "gift-boxes",
         image: "images/143.jpg"
+    },
+    {
+        id: 144,
+        name: "Colour Rocket",
+        description: "Rocket with Colours",
+        price: 90.50,
+        originalPrice: 181.00,
+        category: "fancy-out",
+        image: "images/144.jpg"
+    },
+    {
+        id: 145,
+        name: "Chitu Puttu",
+        description: "Chitu Puttu 1 box",
+        price: 50.50,
+        originalPrice: 101.00,
+        category: "kids-special",
+        image: "images/145.jpg"
+    },
+    {
+        id: 146,
+        name: "100' Wala",
+        description: "100 Wala",
+        price: 250.00,
+        originalPrice: 500.00,
+        category: "wala",
+        image: "images/146.jpg"
+    },
+    {
+        id: 147,
+        name: "2000' Wala",
+        description: "2000 Wala",
+        price: 750.00,
+        originalPrice: 1500.00,
+        category: "wala",
+        image: "images/147.jpg"
+    },
+    {
+        id: 148,
+        name: "5000' Wala",
+        description: "5000 Wala",
+        price: 1500.00,
+        originalPrice: 3000.00,
+        category: "wala",
+        image: "images/148.jpg"
+    },
+    {
+        id: 149,
+        name: "10000' Wala",
+        description: "10000 Wala",
+        price: 3750.00,
+        originalPrice: 7500.00,
+        category: "wala",
+        image: "images/149.jpg"
+    },
+    {
+        id: 150,
+        name: "1000' Wala",
+        description: "1000 Wala",
+        price: 375.00,
+        originalPrice: 750.00,
+        category: "wala",
+        image: "images/150.jpg"
     }
 ];
 
@@ -1531,7 +1594,7 @@ function handleOrderSubmit(e) {
         `${note ? `*Note:* ${note}%0A` : ''}`;
     
     // Open WhatsApp with pre-filled message
-    const whatsappUrl = `https://wa.me/+919600166116?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/9600166116?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
     
     // Close modal
@@ -1735,7 +1798,7 @@ function checkoutCartFunc() {
         `*Please provide your details to confirm the order*`;
     
     // Open WhatsApp with pre-filled message
-    const whatsappUrl = `https://wa.me/+919600166116?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/9600166116?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
     
     // Close modal
@@ -1854,5 +1917,4 @@ function closePreviewModal() {
     if (previewModal) {
         previewModal.classList.add('hidden');
     }
-
 }
